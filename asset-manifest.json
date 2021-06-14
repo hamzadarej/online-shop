@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/hamzadarej/online-shop.git/static/css/main.3fcaab9c.chunk.css",
-    "main.js": "/hamzadarej/online-shop.git/static/js/main.81e0081c.chunk.js",
-    "main.js.map": "/hamzadarej/online-shop.git/static/js/main.81e0081c.chunk.js.map",
+    "main.css": "/hamzadarej/online-shop.git/static/css/main.5db2606e.chunk.css",
+    "main.js": "/hamzadarej/online-shop.git/static/js/main.60f990d1.chunk.js",
+    "main.js.map": "/hamzadarej/online-shop.git/static/js/main.60f990d1.chunk.js.map",
     "runtime-main.js": "/hamzadarej/online-shop.git/static/js/runtime-main.5e4aa899.js",
     "runtime-main.js.map": "/hamzadarej/online-shop.git/static/js/runtime-main.5e4aa899.js.map",
-    "static/js/2.5a2c2d16.chunk.js": "/hamzadarej/online-shop.git/static/js/2.5a2c2d16.chunk.js",
-    "static/js/2.5a2c2d16.chunk.js.map": "/hamzadarej/online-shop.git/static/js/2.5a2c2d16.chunk.js.map",
+    "static/js/2.abcfeaa3.chunk.js": "/hamzadarej/online-shop.git/static/js/2.abcfeaa3.chunk.js",
+    "static/js/2.abcfeaa3.chunk.js.map": "/hamzadarej/online-shop.git/static/js/2.abcfeaa3.chunk.js.map",
     "index.html": "/hamzadarej/online-shop.git/index.html",
-    "static/css/main.3fcaab9c.chunk.css.map": "/hamzadarej/online-shop.git/static/css/main.3fcaab9c.chunk.css.map",
-    "static/js/2.5a2c2d16.chunk.js.LICENSE.txt": "/hamzadarej/online-shop.git/static/js/2.5a2c2d16.chunk.js.LICENSE.txt"
+    "static/css/main.5db2606e.chunk.css.map": "/hamzadarej/online-shop.git/static/css/main.5db2606e.chunk.css.map",
+    "static/js/2.abcfeaa3.chunk.js.LICENSE.txt": "/hamzadarej/online-shop.git/static/js/2.abcfeaa3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5e4aa899.js",
-    "static/js/2.5a2c2d16.chunk.js",
-    "static/css/main.3fcaab9c.chunk.css",
-    "static/js/main.81e0081c.chunk.js"
+    "static/js/2.abcfeaa3.chunk.js",
+    "static/css/main.5db2606e.chunk.css",
+    "static/js/main.60f990d1.chunk.js"
   ]
 }
