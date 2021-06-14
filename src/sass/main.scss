@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(to bottom ,rgb(165, 199, 165) ,rgb(134, 134, 199));
+    ul {
+        border: 1px solid red;
+        display: flex;
+        justify-content: center;
+        width: 50vw;
+        align-items: center;
+
+       flex-direction: row;   
+       flex-wrap: wrap; 
+       list-style: none;    
+
+        li {
+            border: 1px solid black;
+            width: 10vw;
+            height: 30vh;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+}
