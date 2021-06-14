@@ -5,6 +5,8 @@ body {
     width: 100vw;
     height: 100vh;
     flex-direction: column;
+    text-align: center;
+    
     background: linear-gradient(to bottom ,rgb(165, 199, 165) ,rgb(134, 134, 199));
     ul {
         border: 1px solid red;

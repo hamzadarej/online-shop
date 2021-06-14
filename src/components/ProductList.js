@@ -9,7 +9,7 @@ const ProductList = ({ data }) => {
     console.log(cart);
   };
   const bill = () =>
-    setTotalBill(cart.reduce((acc, cur) => acc + cur.price, 0));
+    setTotalBill(cart.reduce((acc, cur) => acc + cur.price, 0) );
     
   const items = data.map((item, i) => (
     <ProductItem key={i} info={item} bill={bill} addToCart={addToCart}  />

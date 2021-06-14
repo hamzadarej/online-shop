@@ -13,7 +13,7 @@ const ProductItem = ({ info, addToCart ,bill}) => {
         onClick={() => {
           console.log(info);
           addToCart(info);
-          bill(price);
+          bill();
         }}
       >
         {inventory > 0 ? "Add to cart" : "Sold out"}
