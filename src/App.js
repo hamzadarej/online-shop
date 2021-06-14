@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import Data from "./data.json";
 import ProductList from "./components/ProductList";
 import { FaBeer } from 'react-icons/fa';
+//<h3>Lets go for a <FaBeer /></h3>
+
+       
+
 
 function App() {
   const [data, setData] = useState(Data);
@@ -26,18 +30,15 @@ function App() {
     lookUp();
   };
   return (
-    <div >
+    <React.Fragment >
           <h1>Welcome to our online store</h1>
-      <h3>
-        Lets go for a <FaBeer />
-       
-      </h3>
+     
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={changeHandle} value={userInput} />
         <input type="submit" value="filter" />
       </form>
       <ProductList data={userInput ? filteredData : data} />
-    </div>
+    </React.Fragment>
   );
 }
 

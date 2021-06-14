@@ -9,10 +9,10 @@ const ProductList = ({ data }) => {
     console.log(cart);
   };
   const bill = () =>
-    setTotalBill(cart.reduce((acc, cur) => acc + cur.price, 0) );
+    setTotalBill(cart.reduce((acc, cur) => acc + cur.price, 0 ));
     
   const items = data.map((item, i) => (
-    <ProductItem key={i} info={item} bill={bill} addToCart={addToCart}  />
+    <ProductItem key={i} info={item} addToCart={addToCart} bill={bill} />
      
   ));
 
@@ -20,8 +20,8 @@ const ProductList = ({ data }) => {
     
   return (
     <React.Fragment>
-      <div >
-        <button onClick={bill}>Total bill</button> <h6>{totalBill}€</h6>
+      <div>
+        <button className="totalB" onClick={bill}>Total bill</button> <h2>{totalBill}€</h2>
       </div>
       <ul>{items}</ul>
     </React.Fragment>
