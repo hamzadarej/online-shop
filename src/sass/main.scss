@@ -1,3 +1,4 @@
+@import "~bootstrap/scss/bootstrap";
 body {
     display: flex;
     justify-content: center;
@@ -12,7 +13,7 @@ body {
         
         display: flex;
         justify-content: center;
-        width: 50vw;
+        width: 60vw;
         align-items: center;
 
        flex-direction: row;   
@@ -21,7 +22,7 @@ body {
 
         li {
             border: 1px solid black;
-            width: 10vw;
+            width: 10rem;
             height: 30vh;
             margin: 10px;
             display: flex;

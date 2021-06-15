@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import Data from "./data.json";
 import ProductList from "./components/ProductList";
-import { FaBeer } from 'react-icons/fa';
+import { FaBeer } from "react-icons/fa";
 //<h3>Lets go for a <FaBeer /></h3>
-
-       
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   const [data, setData] = useState(Data);
@@ -30,9 +28,9 @@ function App() {
     lookUp();
   };
   return (
-    <React.Fragment >
-          <h1>Welcome to our online store</h1>
-     
+    <React.Fragment>
+      <h1>Welcome to our online store</h1>
+
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={changeHandle} value={userInput} />
         <input type="submit" value="filter" />
