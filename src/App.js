@@ -34,7 +34,7 @@ function App() {
     <StoreContext.Provider value={Store}>
       <h1>Welcome to our online store</h1>
 
-      <form onSubmit={handleSubmit}>
+      <form className="filter-form" onSubmit={handleSubmit}>
         <input type="text" onChange={changeHandle} value={userInput} />
         <input type="submit" value="filter" />
       </form>
