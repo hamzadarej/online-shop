@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductItem = ({ info, addToCart ,bill}) => {
+const ProductItem = ({ info, addToCart }) => {
   const { id, productName, icon, price, inventory } = info;
 
   return (
@@ -13,7 +13,6 @@ const ProductItem = ({ info, addToCart ,bill}) => {
         onClick={() => {
           console.log(info);
           addToCart(info);
-          bill();
         }}
       >
         {inventory > 0 ? "Add to cart" : "Sold out"}
