@@ -1,12 +1,9 @@
 import React, { useState,useContext } from "react";
-//import Data from "./data.json";
 import ProductList from "./components/ProductList";
-//import { FaBeer } from "react-icons/fa";
-//<h3>Lets go for a <FaBeer /></h3>
 import {StoreContext,Store} from './context';
 
 function App() {
- // const [data, setData] = useState(Data);
+ 
   const [userInput, setUserInput] = useState("");
   const [filteredData, setFilteredData] = useState([]);
   const store = useContext(StoreContext);
@@ -17,11 +14,10 @@ function App() {
   const lookUp = () => {
     const userText = userInput.toLocaleLowerCase().trim();
     const userTextLength = userText.length;
-    // const searchText = userText ? userText : "";
     let newArr = store.data.filter((item) => {
       const slicedProductName = item.productName.slice(0, userTextLength);
       return slicedProductName === userText;
-    });console.log([...newArr]);
+    });
     setFilteredData(newArr);
   };
   
