@@ -2,12 +2,12 @@ import React, { useState, useContext } from "react";
 import ProductItem from "./ProductItem";
 import { StoreContext } from "../context";
 
-const ProductList = ({userInput,filteredData}) => {
+const ProductList = ({userInput}) => {
   
   const store = useContext(StoreContext);
   const [totalBill, setTotalBill] = useState(0);
  
- let check =userInput ? filteredData:store.data;
+ const check =store.lookUp(userInput);
   const items = check.map((item, i) => (
     <ProductItem key={i} info={item} addToCart={store.addToCart} />
   ));
