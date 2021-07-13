@@ -1,27 +1,18 @@
-import React, { useState, useContext } from "react";
-import ProductItem from "./ProductItem";
-import { StoreContext } from "../context";
+import React from "react";
+import { connect } from "react-redux";
 
-const ProductList = ({userInput}) => {
-  
-  const store = useContext(StoreContext);
-  const [totalBill, setTotalBill] = useState(0);
- 
- const check =store.lookUp(userInput);
-  const items = check.map((item, i) => (
-    <ProductItem key={i} info={item} addToCart={store.addToCart} />
+import ProductListItem from "./ProductListItem";
+
+const ProductList = (props) => {
+  const { items } = props;
+  console.log(items);
+  const allItems = items.map((item) => (
+    <ProductListItem item={item} key={item.id} />
   ));
-
-  return (
-    <React.Fragment>
-      <div className="header">
-        <button className="totalB" onClick={() => setTotalBill(store.bill())}>
-          Total bill
-        </button>{" "}
-        <h2>{totalBill}€</h2>
-      </div>
-      <ul>{items}</ul>
-    </React.Fragment>
-  );
+  return <ul className="product">{allItems}</ul>;
 };
-export default ProductList;
+
+const mapStoreToProps = (store) => ({
+  items: Object.values(store.products),
+});
+export default connect(mapStoreToProps)(ProductList);

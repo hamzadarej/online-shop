@@ -1,33 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ProductList from "./components/ProductList";
-import {StoreContext,Store} from './context';
+import ProductInfo from "./components/ProductInfo";
+import Menu from "./components/Menu";
+import About from "./components/About";
+import Home from "./components/Home";
+import ShoppingCart from "./components/ShoppingCart";
 
-function App() {
- 
-  const [userInput, setUserInput] = useState("");
-  //const [filteredData, setFilteredData] = useState([]);
-  //const store = useContext(StoreContext);
-
-  const changeHandle = (e) => {
-    setUserInput(e.target.value);
-  };
-
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-  };
+const App = () => {
   return (
-    <StoreContext.Provider value={Store}>
-      <h1>Welcome to our online store</h1>
-
-      <form className="filter-form" onSubmit={handleSubmit}>
-        <input type="text" onChange={changeHandle} value={userInput} />
-        <input type="submit" value="filter" />
-      </form>
-      <ProductList userInput={userInput} />
-    </StoreContext.Provider>
+    <Router>
+      <Menu />
+      <h1>Mr online-store</h1>
+      <Switch>
+        <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
+        <Route path="/about" exact component={About} />
+        <Route path="/product" exact component={ProductList} />
+        <Route
+          path="/product/:id"
+          component={({ match }) => <ProductInfo id={match.params.id} />}
+        />
+        <Route path="/cart" exact component={ShoppingCart} />
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
